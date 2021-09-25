@@ -28,8 +28,17 @@ class IMS:
         lbl_menuLogo=Label(leftMenu,image=self.MenuLogo)
         lbl_menuLogo.pack(side=TOP,fill=X)
 
+        self.icon_side=PhotoImage(file="images/side.png")
         lbl_menu=Label(leftMenu,text="Menu", font=("times new roman",20),bg="#009688").pack(side=TOP,fill=X)
-        btn_employee=Button(leftMenu,text="Employee", font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_employee=Button(leftMenu,text="Employee",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_supplier=Button(leftMenu,text="Supplier",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_category=Button(leftMenu,text="Category",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_product=Button(leftMenu,text="Product",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_sales=Button(leftMenu,text="Sales",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+        btn_exit=Button(leftMenu,text="Exit",image=self.icon_side,compound=LEFT,padx=5,anchor="w",font=("times new roman",20,"bold"),bg="white",bd=3,cursor="hand2").pack(side=TOP,fill=X)
+
+        #=========Footer========
+        lbl_footer=Label(self.root,text="IMS-Inventory Management System | Developed by Mamun\nFor any Technical Issue Contact: 01712451994",font=("times new roman", 12),bg="#4d636d",fg="white").pack(side=BOTTOM,fill=X)
 
 root=Tk()
 obf=IMS(root)
